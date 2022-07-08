@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
 import './Main.scss';
 // import "../../style/reset.css"
 // import '../../../styles/common.scss';
+// import '../../../components/Nav/Comment.js';
+import Comment from '../../../components/Nav/Comment.js';
 
 function Main() {
+  const [commentValue, setCommentValue] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  const newCommnet = ({ target }) => {
+    setCommentValue(target.value);
+  };
+
+  const commentCondition = e => {
+    if (commentValue.length > 0 && (e.key === 'Enter' || e.type == 'click')) {
+      setCommentList([...commentList, commentValue]);
+      setCommentValue('');
+    }
+  };
+
   return (
     <>
       <nav>
@@ -91,15 +108,45 @@ function Main() {
                     </div>
                     <i className="far fa-heart empty"></i>
                   </div>
+
+                  <Comment commentList={commentList} />
+                  {/* <div>
+                    {commentList.map(function (a, i) {
+                      return (
+                        <div className="comments-comment">
+                          <div className="comment">
+                            <span className="comment_user-name">
+                              neceosecius
+                            </span>
+                            <p className="comment_content" key={i}>
+                              {a}
+                            </p>
+                          </div>
+                          <i className="far fa-heart empty"></i>
+                        </div>
+                      );
+                    })}
+                  </div> */}
                 </div>
+
                 <span className="comments-time">50초 전</span>
               </div>
+
               <div className="input-box">
                 <input
                   className="input-comments"
                   placeholder="댓글 달기..."
+                  onChange={newCommnet}
+                  onKeyUp={commentCondition}
+                  value={commentValue}
                 ></input>
-                <button className="comments-btn">게시</button>
+                <button
+                  type="submit"
+                  onClick={commentCondition}
+                  className="comments-btn"
+                >
+                  게시
+                </button>
               </div>
             </div>
           </div>

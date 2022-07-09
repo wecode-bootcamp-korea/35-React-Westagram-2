@@ -6,21 +6,24 @@ import '../../../styles/reset.scss';
 // 로그인 부분 사진 변동시키기
 
 const LoginWon = () => {
-  const [number, setNumber] = useState(1);
   const [valueId, setValueId] = useState('');
   const [valuePw, setValuePw] = useState('');
   const [disabled, setDisabled] = useState(true);
   const [focus, setFocus] = useState('');
+
   const interval = useRef();
   const navigate = useNavigate();
 
+  // 사진 바꾸기
+  const [img, setImg] = useState({ img1: 'active', img2: '', img3: '' });
+
   const cycleImage = () => {
-    if (number === 1) {
-      setNumber(2);
-    } else if (number === 2) {
-      setNumber(3);
-    } else if (number === 3) {
-      setNumber(1);
+    if (img.img1 === 'active') {
+      setImg({ ...img, img1: '', img2: 'active' });
+    } else if (img.img2 === 'active') {
+      setImg({ ...img, img2: '', img3: 'active' });
+    } else if (img.img3 === 'active') {
+      setImg({ ...img, img3: '', img1: 'active' });
     }
   };
 
@@ -31,7 +34,7 @@ const LoginWon = () => {
       console.log('끝');
       clearInterval(interval.current);
     };
-  }, [number]);
+  }, [img]);
 
   const onChangeId = e => {
     setValueId(e.target.value);
@@ -61,16 +64,16 @@ const LoginWon = () => {
             <div className="background_image">
               <div className="image-container">
                 <img
-                  className="image active"
-                  src={`./images/wonikChoi/cover-instagram${number}.png`}
+                  className={`image ${img.img1}`}
+                  src="./images/wonikChoi/cover-instagram1.png"
                 />
                 <img
-                  className="image active"
-                  src={`./images/wonikChoi/cover-instagram${number}.png`}
+                  className={`image ${img.img2}`}
+                  src="./images/wonikChoi/cover-instagram2.png"
                 />
                 <img
-                  className="image active"
-                  src={`./images/wonikChoi/cover-instagram${number}.png`}
+                  className={`image ${img.img3}`}
+                  src="./images/wonikChoi/cover-instagram3.png"
                 />
               </div>
             </div>

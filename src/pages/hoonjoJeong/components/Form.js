@@ -11,17 +11,11 @@ const Form = () => {
     return id.includes('@') && id.length > 5 && pw.length > 5;
   };
 
-  const idValue = e => {
-    setId(e.target.value);
-  };
+  const idValue = e => setId(e.target.value);
 
-  const pwValue = e => {
-    setPw(e.target.value);
-  };
+  const pwValue = e => setPw(e.target.value);
 
-  const goToMain = () => {
-    navigate('/main-hoon');
-  };
+  const goToMain = () => navigate('/main-hoon');
 
   return (
     <form className="login__box__form" onSubmit={goToMain}>

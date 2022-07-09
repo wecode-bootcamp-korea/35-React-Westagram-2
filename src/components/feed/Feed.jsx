@@ -38,11 +38,10 @@ export default function Feed({ userName, userImg, userBackImg }) {
   const [comment, setComment] = useState('');
   const [commentInfo, dispatch] = useReducer(reducer, initialState);
   const [like, setLike] = useState('');
-  const likeNumber = useRef();
+  const likeNumber = useRef(Math.floor(Math.random() * 999) + 1000);
   const isFalse = useRef(true);
   const [heartClass, setHeartClass] = useState('bx bx-heart');
-
-  likeNumber.current = Math.floor(Math.random() * 999) + 1000;
+  const disabled = useRef(true);
 
   useEffect(() => {
     setLike(likeNumber.current);
@@ -153,6 +152,8 @@ export default function Feed({ userName, userImg, userBackImg }) {
               dispatch({ type: 'create-message', payload: { comment } });
               setComment('');
             }}
+            disabled={comment ? false : true}
+            style={{ opacity: comment ? '1' : '0.5' }}
           >
             게시
           </button>

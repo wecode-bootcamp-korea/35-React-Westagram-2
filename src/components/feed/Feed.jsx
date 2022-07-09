@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useReducer, useRef, useEffect } from 'react';
 import Comment from '../comment/Comment';
 import './feed.scss';
 
@@ -37,6 +37,27 @@ const initialState = {
 export default function Feed({ userName, userImg, userBackImg }) {
   const [comment, setComment] = useState('');
   const [commentInfo, dispatch] = useReducer(reducer, initialState);
+  const [like, setLike] = useState('');
+  const likeNumber = useRef();
+  const isFalse = useRef(true);
+  const [heartClass, setHeartClass] = useState('bx bx-heart');
+
+  likeNumber.current = Math.floor(Math.random() * 999) + 1000;
+
+  useEffect(() => {
+    setLike(likeNumber.current);
+    console.log('시작');
+  }, []);
+
+  const clickLike = () => {
+    return heartClass === 'bx bx-heart'
+      ? (setHeartClass('bx bxs-heart'),
+        setLike(prevLike => prevLike + 1),
+        (isFalse.current = false))
+      : (setHeartClass('bx bx-heart'),
+        setLike(prevLike => prevLike - 1),
+        (isFalse.current = true));
+  };
 
   return (
     <div className="feed">
@@ -61,7 +82,14 @@ export default function Feed({ userName, userImg, userBackImg }) {
         <div className="main-article__heart">
           <div className="heart-container">
             <div className="heart-icon">
-              <i className="bx bx-heart"></i>
+              <i
+                className={heartClass}
+                style={{
+                  color: isFalse.current ? 'black' : 'red',
+                  cursor: 'pointer',
+                }}
+                onClick={clickLike}
+              ></i>
             </div>
             <div className="heart-icon">
               <i className="bx bx-message-rounded"></i>
@@ -78,7 +106,7 @@ export default function Feed({ userName, userImg, userBackImg }) {
         </div>
         <div className="main-article__like">
           <div className="like-span">
-            좋아요 <span>1,243</span>개
+            좋아요 <span>{like}</span>개
           </div>
         </div>
         <div className="main-article__description">

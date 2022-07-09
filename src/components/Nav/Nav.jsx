@@ -28,7 +28,7 @@ export default function Nav() {
               <input
                 type="text"
                 id="input"
-                autocomplete="off"
+                autoComplete="off"
                 className={`search-input__input ${focus}`}
                 onFocus={onFocus}
                 onBlur={onBlur}

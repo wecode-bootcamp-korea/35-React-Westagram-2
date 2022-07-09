@@ -50,7 +50,7 @@ function Comment() {
 
           {commentList.map(function (a, i) {
             return (
-              <div className="comments-comment" key={'i'}>
+              <div className="comments-comment" key={i}>
                 <div className="comment">
                   <span className="comment_user-name">neceosecius</span>
                   <p className="comment_content" key={i}>

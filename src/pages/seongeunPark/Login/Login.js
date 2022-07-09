@@ -47,7 +47,7 @@ function Login() {
           </div>
           <button
             disabled={!loginCondition}
-            className={'login-btn'}
+            className="login-btn"
             style={
               loginCondition
                 ? { backgroundColor: '#4da5fd' }

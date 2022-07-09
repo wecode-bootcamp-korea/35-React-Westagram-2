@@ -15,7 +15,7 @@ function Main() {
   };
 
   const commentCondition = e => {
-    if (commentValue.length > 0 && (e.key === 'Enter' || e.type == 'click')) {
+    if (commentValue.length > 0 && (e.key === 'Enter' || e.type === 'click')) {
       setCommentList([...commentList, commentValue]);
       setCommentValue('');
     }
@@ -25,20 +25,20 @@ function Main() {
     <>
       <nav>
         <div className="nav-left">
-          <i className="fab fa-instagram fa-2x"></i>
-          <div className="nav-vertical-line"></div>
+          <i className="fab fa-instagram fa-2x" />
+          <div className="nav-vertical-line" />
           <h1 className="main-title">Westagram</h1>
         </div>
         <div className="nav-search">
           <input type="text" className="nav-search_input" />
-          <i className="fas fa-search"></i>
+          <i className="fas fa-search" />
           <span className="nav-search_word">검색</span>
         </div>
         <div className="nav-right">
-          <i className="fas fa-compass"></i>
-          <i className="far fa-heart"></i>
-          <i className="far fa-user"></i>
-          <div className="red-dot"></div>
+          <i className="fas fa-compass" />
+          <i className="far fa-heart" />
+          <i className="far fa-user" />
+          <div className="red-dot" />
         </div>
       </nav>
       <main>
@@ -57,7 +57,7 @@ function Main() {
                 />
               </div>
               <div className="feeds-header_right">
-                <i className="fas fa-ellipsis-h"></i>
+                <i className="fas fa-ellipsis-h" />
               </div>
             </div>
             <div className="feed-img">
@@ -69,12 +69,12 @@ function Main() {
             <div className="feeds-function-comments">
               <div className="feeds-function">
                 <div className="feeds-function_left">
-                  <i className="fas fa-heart fa-lg "></i>
-                  <i className="far fa-comment fa-lg"></i>
-                  <i className="fas fa-upload fa-lg"></i>
+                  <i className="fas fa-heart fa-lg " />
+                  <i className="far fa-comment fa-lg" />
+                  <i className="fas fa-upload fa-lg" />
                 </div>
                 <div className="feeds-function_right">
-                  <i className="fas fa-bookmark fa-lg"></i>
+                  <i className="fas fa-bookmark fa-lg" />
                 </div>
               </div>
               <div className="likes-comments">
@@ -106,7 +106,7 @@ function Main() {
                       <span className="comment_user-name">neceosecius</span>
                       <p className="comment_content">너무 귀엽당</p>
                     </div>
-                    <i className="far fa-heart empty"></i>
+                    <i className="far fa-heart empty" />
                   </div>
 
                   <Comment commentList={commentList} />
@@ -139,7 +139,7 @@ function Main() {
                   onChange={newCommnet}
                   onKeyUp={commentCondition}
                   value={commentValue}
-                ></input>
+                />
                 <button
                   type="submit"
                   onClick={commentCondition}

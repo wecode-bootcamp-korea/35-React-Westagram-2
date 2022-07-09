@@ -43,74 +43,78 @@ function Main() {
       </nav>
       <main>
         <div className="main-left-right">
-          <div className="feeds">
-            <div className="feeds-header">
-              <div className="profile">
-                <div className="profile-info">
-                  <h1 className="profile-header_name">wecode_bootcamp</h1>
-                  <p className="profile-header_description">Wecode - 위코드</p>
-                </div>
-                <img
-                  className="profile-img"
-                  src="../../images/seongeunPark/IMG_4764.jpg"
-                  alt="profile"
-                />
-              </div>
-              <div className="feeds-header_right">
-                <i className="fas fa-ellipsis-h" />
-              </div>
-            </div>
-            <div className="feed-img">
-              <img
-                src="../../images/seongeunPark/chihiro014.jpg"
-                alt="charcoal"
-              />
-            </div>
-            <div className="feeds-function-comments">
-              <div className="feeds-function">
-                <div className="feeds-function_left">
-                  <i className="fas fa-heart fa-lg " />
-                  <i className="far fa-comment fa-lg" />
-                  <i className="fas fa-upload fa-lg" />
-                </div>
-                <div className="feeds-function_right">
-                  <i className="fas fa-bookmark fa-lg" />
-                </div>
-              </div>
-              <div className="likes-comments">
-                <div className="likes-comments_likes">
+          <div class="feeds-container">
+            <div className="feeds">
+              <div className="feeds-header">
+                <div className="profile">
+                  <div className="profile-info">
+                    <h1 className="profile-header_name">wecode_bootcamp</h1>
+                    <p className="profile-header_description">
+                      Wecode - 위코드
+                    </p>
+                  </div>
                   <img
                     className="profile-img"
-                    src="../../images/seongeunPark/IMG_6408 (1).png"
-                    alt="who press a heart icon"
+                    src="../../images/seongeunPark/IMG_4764.jpg"
+                    alt="profile"
                   />
-                  <p className="likes-info">
-                    <span className="likes_user-name">seal</span>님 외{' '}
-                    <span className="likes-user-number">10</span>명이 좋아합니다
-                  </p>
                 </div>
-
-                <div className="comments">
-                  <div className="comments-comment">
-                    <div className="comment">
-                      <span className="comment_user-name main-user">
-                        kookybrown
-                      </span>
-                      <p className="comment_content">숯덩어리🖤</p>
-                      <span className="comment-more">더 보기</span>
-                    </div>
+                <div className="feeds-header_right">
+                  <i className="fas fa-ellipsis-h" />
+                </div>
+              </div>
+              <div className="feed-img">
+                <img
+                  src="../../images/seongeunPark/chihiro014.jpg"
+                  alt="charcoal"
+                />
+              </div>
+              <div className="feeds-function-comments">
+                <div className="feeds-function">
+                  <div className="feeds-function_left">
+                    <i className="fas fa-heart fa-lg " />
+                    <i className="far fa-comment fa-lg" />
+                    <i className="fas fa-upload fa-lg" />
+                  </div>
+                  <div className="feeds-function_right">
+                    <i className="fas fa-bookmark fa-lg" />
+                  </div>
+                </div>
+                <div className="likes-comments">
+                  <div className="likes-comments_likes">
+                    <img
+                      className="profile-img"
+                      src="../../images/seongeunPark/IMG_6408 (1).png"
+                      alt="who press a heart icon"
+                    />
+                    <p className="likes-info">
+                      <span className="likes_user-name">seal</span>님 외{' '}
+                      <span className="likes-user-number">10</span>명이
+                      좋아합니다
+                    </p>
                   </div>
 
-                  <div className="comments-comment">
-                    <div className="comment">
-                      <span className="comment_user-name">neceosecius</span>
-                      <p className="comment_content">너무 귀엽당</p>
+                  <div className="comments">
+                    <div className="comments-comment">
+                      <div className="comment">
+                        <span className="comment_user-name main-user">
+                          kookybrown
+                        </span>
+                        <p className="comment_content">숯덩어리🖤</p>
+                        <span className="comment-more">더 보기</span>
+                      </div>
                     </div>
-                    <i className="far fa-heart empty" />
-                  </div>
 
-                  <Comment commentList={commentList} />
-                  {/* <div>
+                    <div className="comments-comment">
+                      <div className="comment">
+                        <span className="comment_user-name">neceosecius</span>
+                        <p className="comment_content">너무 귀엽당</p>
+                      </div>
+                      <i className="far fa-heart empty" />
+                    </div>
+
+                    <Comment commentList={commentList} />
+                    {/* <div>
                     {commentList.map(function (a, i) {
                       return (
                         <div className="comments-comment">
@@ -127,29 +131,142 @@ function Main() {
                       );
                     })}
                   </div> */}
+                  </div>
+
+                  <span className="comments-time">50초 전</span>
                 </div>
 
-                <span className="comments-time">50초 전</span>
+                <div className="input-box">
+                  <input
+                    className="input-comments"
+                    placeholder="댓글 달기..."
+                    onChange={newCommnet}
+                    onKeyUp={commentCondition}
+                    value={commentValue}
+                  />
+                  <button
+                    type="submit"
+                    onClick={commentCondition}
+                    className="comments-btn"
+                  >
+                    게시
+                  </button>
+                </div>
               </div>
+            </div>
 
-              <div className="input-box">
-                <input
-                  className="input-comments"
-                  placeholder="댓글 달기..."
-                  onChange={newCommnet}
-                  onKeyUp={commentCondition}
-                  value={commentValue}
+            <div className="feeds">
+              <div className="feeds-header">
+                <div className="profile">
+                  <div className="profile-info">
+                    <h1 className="profile-header_name">wecode_bootcamp</h1>
+                    <p className="profile-header_description">
+                      Wecode - 위코드
+                    </p>
+                  </div>
+                  <img
+                    className="profile-img"
+                    src="../../images/seongeunPark/IMG_4764.jpg"
+                    alt="profile"
+                  />
+                </div>
+                <div className="feeds-header_right">
+                  <i className="fas fa-ellipsis-h" />
+                </div>
+              </div>
+              <div className="feed-img">
+                <img
+                  src="../../images/seongeunPark/chihiro014.jpg"
+                  alt="charcoal"
                 />
-                <button
-                  type="submit"
-                  onClick={commentCondition}
-                  className="comments-btn"
-                >
-                  게시
-                </button>
+              </div>
+              <div className="feeds-function-comments">
+                <div className="feeds-function">
+                  <div className="feeds-function_left">
+                    <i className="fas fa-heart fa-lg " />
+                    <i className="far fa-comment fa-lg" />
+                    <i className="fas fa-upload fa-lg" />
+                  </div>
+                  <div className="feeds-function_right">
+                    <i className="fas fa-bookmark fa-lg" />
+                  </div>
+                </div>
+                <div className="likes-comments">
+                  <div className="likes-comments_likes">
+                    <img
+                      className="profile-img"
+                      src="../../images/seongeunPark/IMG_6408 (1).png"
+                      alt="who press a heart icon"
+                    />
+                    <p className="likes-info">
+                      <span className="likes_user-name">seal</span>님 외{' '}
+                      <span className="likes-user-number">10</span>명이
+                      좋아합니다
+                    </p>
+                  </div>
+
+                  <div className="comments">
+                    <div className="comments-comment">
+                      <div className="comment">
+                        <span className="comment_user-name main-user">
+                          kookybrown
+                        </span>
+                        <p className="comment_content">숯덩어리🖤</p>
+                        <span className="comment-more">더 보기</span>
+                      </div>
+                    </div>
+
+                    <div className="comments-comment">
+                      <div className="comment">
+                        <span className="comment_user-name">neceosecius</span>
+                        <p className="comment_content">너무 귀엽당</p>
+                      </div>
+                      <i className="far fa-heart empty" />
+                    </div>
+
+                    <Comment commentList={commentList} />
+                    {/* <div>
+                    {commentList.map(function (a, i) {
+                      return (
+                        <div className="comments-comment">
+                          <div className="comment">
+                            <span className="comment_user-name">
+                              neceosecius
+                            </span>
+                            <p className="comment_content" key={i}>
+                              {a}
+                            </p>
+                          </div>
+                          <i className="far fa-heart empty"></i>
+                        </div>
+                      );
+                    })}
+                  </div> */}
+                  </div>
+
+                  <span className="comments-time">50초 전</span>
+                </div>
+
+                <div className="input-box">
+                  <input
+                    className="input-comments"
+                    placeholder="댓글 달기..."
+                    onChange={newCommnet}
+                    onKeyUp={commentCondition}
+                    value={commentValue}
+                  />
+                  <button
+                    type="submit"
+                    onClick={commentCondition}
+                    className="comments-btn"
+                  >
+                    게시
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
           <div className="main-right">
             <div className="feeds-header">
               <div className="profile">

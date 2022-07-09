@@ -14,7 +14,7 @@ const LoginWon = () => {
   const interval = useRef();
   const navigate = useNavigate();
 
-  // 사진 바꾸기
+  // 사진 바꾸기 (객체로 useState 사용하기)
   const [img, setImg] = useState({ img1: 'active', img2: '', img3: '' });
 
   const cycleImage = () => {
@@ -28,7 +28,7 @@ const LoginWon = () => {
   };
 
   useEffect(() => {
-    interval.current = setInterval(cycleImage, 3000);
+    interval.current = setInterval(cycleImage, 4000);
     console.log('시작');
     return () => {
       console.log('끝');

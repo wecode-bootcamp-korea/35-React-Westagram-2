@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.scss';
 
+// 검색창 focus 시 화면 변경
 export default function Nav() {
+  const [focus, setFocus] = useState('');
+  const [hidden, setHidden] = useState(true);
+
+  const onFocus = () => {
+    setHidden(false);
+    setFocus('focus');
+  };
+
+  const onBlur = () => {
+    setHidden(true);
+    setFocus('');
+  };
+
   return (
     <div className="navClass">
       <nav className="nav">
@@ -15,11 +29,21 @@ export default function Nav() {
                 type="text"
                 id="input"
                 autocomplete="off"
-                className="search-input__input"
+                className={`search-input__input ${focus}`}
+                onFocus={onFocus}
+                onBlur={onBlur}
                 placeholder="검색"
               />
-              <i className="bx bx-search" id="search"></i>
-              <i className="bx bxs-x-circle" id="exit"></i>
+              <i
+                className="bx bx-search"
+                style={{ display: hidden ? 'block' : 'none' }}
+                id="search"
+              ></i>
+              <i
+                className="bx bxs-x-circle"
+                style={{ display: hidden ? 'none' : 'block' }}
+                id="exit"
+              ></i>
             </div>
           </div>
           <div className="nav-container__icon">

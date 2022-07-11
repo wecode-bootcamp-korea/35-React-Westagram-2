@@ -32,6 +32,7 @@ const Comment = ({ name }) => {
         if (e !== i) {
           return data;
         }
+        return null;
       })
       .filter(n => n);
     setComment(filtered);

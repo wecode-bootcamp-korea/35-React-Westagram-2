@@ -2,12 +2,12 @@ export const Link = () => {
   return (
     <>
       <p className="login__text">또는</p>
-      <a href="" className="login__link">
+      <a href="/main" className="login__link">
         <i className="fab fa-facebook">
           <p>Facebook으로 로그인</p>
         </i>
       </a>
-      <a href="" className="login__link">
+      <a href="/main" className="login__link">
         비밀번호를 잊으셨나요?
       </a>
     </>
@@ -18,7 +18,7 @@ export const Signup = () => {
   return (
     <div className="signup__box inner-box">
       <p>
-        계정이 없으신가요? <a href="">가입하기</a>
+        계정이 없으신가요? <a href="/main">가입하기</a>
       </p>
     </div>
   );

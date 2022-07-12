@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  input {
+    outline: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #dbdbdb;
+
+    .nav-left {
+      width: 180px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-vertical-line {
+        height: 35px;
+        border-right: 1px solid black;
+        /* margin-right: 10px */
+      }
+
+      .main-title {
+        font-family: 'Lobster', cursive;
+      }
+    }
+    .nav-search {
+      display: flex;
+      align-items: center;
+      padding-top: 5px;
+      position: relative;
+
+      .nav-search_input {
+        padding: 3px 20px;
+        background-color: #f5f8fa;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+      }
+
+      .fa-search {
+        display: flex;
+        font-size: 12px;
+        left: 70px;
+      }
+
+      .nav-search_word {
+        font-size: 12px;
+        left: 85px;
+      }
+    }
+
+    .nav-search .fa-search,
+    .nav-search_word {
+      color: #dbdbdb;
+      position: absolute;
+    }
+
+    .nav-right {
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .red-dot {
+        background-color: red;
+        width: 5px;
+        height: 5px;
+        border-radius: 3px;
+        position: absolute;
+        left: 74px;
+        top: 30px;
+      }
+    }
+
+    .nav-right i {
+      font-size: 25px;
+      font-weight: lighter;
+    }
+
+    .nav-right i:last-child() {
+      margin-right: 0;
+    }
+  }
+
+  main {
+    // height: 100%vh;
+    padding: 60px 0 60px 0;
+    background-color: rgb(250, 250, 250);
+
+    .main-left-right {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      .feeds {
+        // height: 100%;
+        margin: 0 30px 30px 0;
+        width: 500px;
+
+        .feeds-header {
+          padding: 10px 10px;
+          /* margin-bottom: 15px; */
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #ffffff;
+        }
+
+        .feed-img img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .feeds-function-comments {
+          border: 1px solid #dbdbdb;
+          margin-top: -5px;
+
+          .feeds-function {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            .feeds-function_left,
+            .feeds-function_right i {
+              color: #dbdbdb;
+            }
+
+            .feeds-function_left {
+              width: 100px;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .feeds-function_left .fas:first-child {
+              color: #ed4955;
+            }
+
+            .feeds-function_right i {
+              font-weight: lighter;
+            }
+          }
+
+          .likes-comments {
+            padding: 10px;
+
+            .likes-comments_likes {
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+
+              .likes-info {
+                font-size: 13px;
+              }
+
+              .likes_user-name,
+              .likes-user-number {
+                font-weight: bold;
+              }
+            }
+
+            .likes-comments_likes .profile-img {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin-right: 5px;
+            }
+
+            .comments-time {
+              font-size: 12px;
+              color: #dbdbdb;
+            }
+          }
+
+          .comments {
+            .comments-comment {
+              font-size: 13px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .comment {
+                display: flex;
+                /* justify-content: space-between; */
+                align-items: center;
+                width: 100%;
+
+                .comment_content {
+                  margin-right: 5px;
+                }
+
+                .comment-comment i {
+                  margin-right: 5px;
+                  color: #a7a7a7;
+                }
+
+                .comment_user-name {
+                  font-weight: bold;
+                  margin-right: 5px;
+                  margin-top: 3px;
+                }
+
+                .comment-more {
+                  font-size: 12px;
+                  color: #a7a7a7;
+                }
+              }
+              .icon-container {
+                display: flex;
+                justify-content: space-between;
+
+                i:first-child {
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-right {
+        /* margin-top: -5px; */
+        width: 300px;
+        height: 100%;
+        background-color: transparent;
+
+        .stories,
+        .offers {
+          position: relative;
+          height: 150px;
+          margin-bottom: 10px;
+          border: 1px solid #dbdbdb;
+          overflow: auto;
+
+          .story-menu,
+          .offer-menu {
+            position: sticky;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            background-color: #fff;
+          }
+
+          .story-menu span:first-child,
+          .offer-menu span:first-child {
+            color: #dbdbdb;
+          }
+
+          .story,
+          .offer {
+            padding: 0 10px 10px;
+            overflow: auto;
+
+            .offer-user .profile {
+              flex-direction: row;
+              justify-content: space-between;
+
+              .profile-container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                margin-bottom: 5px;
+                margin-right: 0;
+              }
+
+              .follow-btn {
+                border: none;
+                background-color: inherit;
+                color: #6db2f4;
+              }
+            }
+
+            .offer-user .profile-img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              margin-right: 5px;
+            }
+          }
+
+          .story .profile {
+            justify-content: flex-end;
+            margin-bottom: 5px;
+          }
+
+          .story .profile-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+        }
+        .stories .profile-img {
+          border: 2px solid #ffde2e;
+        }
+      }
+
+      .main-right .profile-img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+
+      .main-right .feeds-header {
+        padding: 0;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+/* input-comments */
+
+.uploading-comments {
+  border-top: 1px solid #a7a7a7;
+}
+
+.uploading-comments {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-comments,
+.comments-btn {
+  border: none;
+}
+
+.input-comments {
+  width: 80%;
+  background-color: transparent;
+}
+
+.comments-btn {
+  width: 10%;
+  background-color: transparent;
+  color: #c6e0fb;
+}
+
+.onBtn {
+  color: #4da5fd;
+}
+
+.input-box {
+  border-top: 1px solid #dbdbdb;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.fill-heart {
+  color: red;
+}
+
+//common
+
+.profile {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  .profile-info {
+    width: 70%;
+
+    .profile-header_name {
+      font-size: 13px;
+    }
+
+    .profile-header_description {
+      font-size: 10px;
+    }
+  }
+
+  /* 크기에 맞게 각각의 css파일에서 크기를 바꿔준다 */
+  .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

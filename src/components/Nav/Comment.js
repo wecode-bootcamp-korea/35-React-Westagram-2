@@ -16,6 +16,9 @@ function Comment() {
     }
   };
 
+  const removeComment = ({ target }) =>
+    target.parentElement.parentElement.remove();
+
   const heartColor = e =>
     e.target.style.color === ''
       ? ((e.target.style.color = 'red'), (e.target.className = 'fas fa-heart'))
@@ -62,7 +65,10 @@ function Comment() {
                     {a}
                   </p>
                 </div>
-                <i className="far fa-heart empty" onClick={heartColor} />
+                <div className="icon-container">
+                  <i className="far fa-minus-square" onClick={removeComment} />
+                  <i className="far fa-heart empty" onClick={heartColor} />
+                </div>
               </div>
             );
           })}

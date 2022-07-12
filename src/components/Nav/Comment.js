@@ -16,6 +16,11 @@ function Comment() {
     }
   };
 
+  const heartColor = e =>
+    e.target.style.color === ''
+      ? ((e.target.style.color = 'red'), (e.target.className = 'fas fa-heart'))
+      : ((e.target.style.color = ''), (e.target.className = 'far fa-heart'));
+
   return (
     <>
       <div className="likes-comments">
@@ -45,7 +50,7 @@ function Comment() {
               <span className="comment_user-name">neceosecius</span>
               <p className="comment_content">너무 귀엽당</p>
             </div>
-            <i className="far fa-heart empty" />
+            <i className="far fa-heart empty" onClick={heartColor} />
           </div>
 
           {commentList.map(function (a, i) {
@@ -57,7 +62,7 @@ function Comment() {
                     {a}
                   </p>
                 </div>
-                <i className="far fa-heart empty" />
+                <i className="far fa-heart empty" onClick={heartColor} />
               </div>
             );
           })}

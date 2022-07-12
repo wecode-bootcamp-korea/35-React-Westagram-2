@@ -20,6 +20,7 @@ function Login() {
 
   const loginCondition = id.includes('@') && pwd.length > 4;
 
+  const enterLogin = e => loginCondition && e.key === 'Enter' && goToMain();
   const goToMain = () => {
     navigate('/main-seong');
   };
@@ -33,12 +34,14 @@ function Login() {
         <div className="login-info">
           <div className="login-input">
             <input
+              onKeyUp={enterLogin}
               className="login-id"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               onChange={updateId}
             />
             <input
+              onKeyUp={enterLogin}
               className="login-password"
               type="password"
               placeholder="비밀번호"

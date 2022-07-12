@@ -29,7 +29,7 @@ function Main() {
       </nav>
       <main>
         <div className="main-left-right">
-          <div class="feeds-container">
+          <div className="feeds-container">
             <div className="feeds">
               <div className="feeds-header">
                 <div className="profile">
@@ -185,7 +185,7 @@ function Main() {
                 </div>
               </div>
             </div>
-            <div div className="offers">
+            <div className="offers">
               <div className="offer-menu">
                 <span>회원님을 위한 추천</span>
                 <span>모두 보기</span>

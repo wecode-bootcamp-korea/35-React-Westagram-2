@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Elvis_lay",
+    "img": "./images/wonikChoi/profile/elvis-ray-J-JOGvnfgM8-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "name": "cover-vesi",
+    "img": "./images/wonikChoi/profile/people1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "malon-alves",
+    "img": "./images/wonikChoi/profile/marlon-alves-UGNVMLyQKtA-unsplash.jpg"
+  },
+  {
+    "id": 4,
+    "name": "rick_gebhard",
+    "img": "./images/wonikChoi/profile/rick-gebhardt-Hi_FonIcfjk-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Yelihi",
+    "img": "./images/wonikChoi/profile/myprofile.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Mendenz",
+    "img": "./images/wonikChoi/profile/people2.jpg"
+  }
+]

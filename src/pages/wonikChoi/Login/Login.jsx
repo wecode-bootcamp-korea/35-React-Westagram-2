@@ -17,16 +17,6 @@ const LoginWon = () => {
   // 사진 바꾸기 (객체로 useState 사용하기)
   const [img, setImg] = useState({ img1: 'active', img2: '', img3: '' });
 
-  // const cycleImage = () => {
-  //   if (img.img1 === 'active') {
-  //     setImg({ ...img, img1: '', img2: 'active' });
-  //   } else if (img.img2 === 'active') {
-  //     setImg({ ...img, img2: '', img3: 'active' });
-  //   } else if (img.img3 === 'active') {
-  //     setImg({ ...img, img3: '', img1: 'active' });
-  //   }
-  // };
-
   useEffect(() => {
     const cycleImage = () => {
       if (img.img1 === 'active') {

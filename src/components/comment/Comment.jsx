@@ -20,16 +20,16 @@ const Comment = ({ comment, id, dispatch }) => {
       <div className="comment-right">
         <i
           className={iconClass}
-          id="exemple"
+          id="example"
           style={{ color: isFalse.current ? 'rgba(0,0,0,0.5)' : 'red' }}
           onClick={likeHaart}
-        ></i>
+        />
         <i
           className="bx bx-trash"
           onClick={() => {
             dispatch({ type: 'delete-message', payload: { id } });
           }}
-        ></i>
+        />
       </div>
     </div>
   );

@@ -35,17 +35,16 @@ const initialState = {
 };
 
 export default function Feed({ userName, userImg, userBackImg }) {
-  const [comment, setComment] = useState('');
   const [commentInfo, dispatch] = useReducer(reducer, initialState);
+  const [comment, setComment] = useState('');
   const [like, setLike] = useState('');
+  const [heartClass, setHeartClass] = useState('bx bx-heart');
   const likeNumber = useRef(Math.floor(Math.random() * 999) + 1000);
   const isFalse = useRef(true);
-  const [heartClass, setHeartClass] = useState('bx bx-heart');
   const disabled = useRef(true);
 
   useEffect(() => {
     setLike(likeNumber.current);
-    console.log('시작');
   }, []);
 
   const clickLike = () => {

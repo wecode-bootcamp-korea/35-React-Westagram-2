@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
+import '../../../styles/common.scss';
 import '../../../styles/reset.scss';
 
 // 로그인 부분 사진 변동시키기
@@ -35,16 +36,17 @@ const LoginWon = () => {
   }, [img]);
 
   const onChangeId = e => {
-    setValueId(e.target.value);
+    const { value } = e.target;
+    setValueId(value);
   };
 
   const onChangePw = e => {
-    setValuePw(e.target.value);
+    const { value } = e.target;
+    setValuePw(value);
   };
 
   const onkey = () => {
-    const valueArr = valueId.split('');
-    return valueArr.some(elm => elm === '@') && valuePw.length > 5
+    return valueId.includes('@') && valuePw.length > 5
       ? (setDisabled(false), setFocus('focus'))
       : (setDisabled(true), setFocus(''));
   };

@@ -1,8 +1,4 @@
-@mixin flex-center($direction: center) {
-  display: flex;
-  justify-content: $direction;
-  align-items: center;
-}
+@import '../../styles/variables.scss';
 
 .friend {
   .top-article__info {

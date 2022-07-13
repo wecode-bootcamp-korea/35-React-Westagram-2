@@ -19,7 +19,7 @@ const Form = () => {
 
   const validation = () => {
     const emailRegExp =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+      /^[0-9a-zA-Z]([-_\\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
     const passwordRegExp =
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
 
@@ -31,7 +31,7 @@ const Form = () => {
   const Login = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('http://10.58.6.45:8000/user/signin', {
+      const response = await fetch('http://fdsjklfdjshklf.com', {
         method: 'POST',
         body: JSON.stringify({
           email: values.email,

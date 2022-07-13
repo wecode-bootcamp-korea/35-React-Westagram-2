@@ -1,7 +1,7 @@
 import { UserStory, UseRecommend } from '../components/Story';
 import Nav from '../components/Nav';
 import Comment from '../components/Comment';
-import Feed from '../components/Feed';
+// import Feed from '../components/Feed';
 import './Main.scss';
 
 const Main = () => {

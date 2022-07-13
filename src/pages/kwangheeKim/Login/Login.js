@@ -10,6 +10,18 @@ function LoginKwang() {
 
   const navigate = useNavigate();
   const goToMain = () => {
+    // fetch('http://10.58.3.203:8000/users/login', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: userid,
+    //     password: userpw,
+    //     name: 'kkh',
+    //     phone_number: '010-1234-5678',
+    //     others: '',
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => (result.access_token ? navigate('/main-kwang') : null()));
     isActive ? navigate('/main-kwang') : null();
   };
 
@@ -31,11 +43,7 @@ function LoginKwang() {
         placeholder="전화번호, 사용자 이름 또는 이메일"
         onChange={idonChange}
         onKeyPress={e => {
-          if (e.key === 'Enter') {
-            goToMain();
-          } else {
-            idonChange();
-          }
+          e.key === 'Enter' ? goToMain() : null();
         }}
       />
       <input
@@ -46,11 +54,7 @@ function LoginKwang() {
         placeholder="비밀번호"
         onChange={pwonChange}
         onKeyPress={e => {
-          if (e.key === 'Enter') {
-            goToMain();
-          } else {
-            pwonChange();
-          }
+          e.key === 'Enter' ? goToMain() : null();
         }}
       />
       <button

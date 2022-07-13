@@ -1,7 +1,6 @@
 import React from 'react';
 
-const CommentList = props => {
-  const { userName, userComment } = props;
+const CommentList = ({ userName, userComment }) => {
   return (
     <p>
       <span className="userId"> {userName} </span>

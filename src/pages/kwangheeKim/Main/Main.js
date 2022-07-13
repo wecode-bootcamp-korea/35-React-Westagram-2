@@ -12,9 +12,7 @@ function MainKwang() {
   };
 
   const writecomment = e => {
-    const copycomments = [...commentlist];
-    copycomments.push(commentinput);
-    setcommentlist(copycomments);
+    setcommentlist([...commentlist, commentinput]);
     setcommentinput('');
   };
 

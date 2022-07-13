@@ -3,31 +3,64 @@ import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const navigate = useNavigate();
-
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
-
-  const validation = () => {
-    return id.includes('@') && id.length > 5 && pw.length > 5;
-  };
-
-  const idValue = e => setId(e.target.value);
-
-  const pwValue = e => setPw(e.target.value);
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+    name: '정훈조',
+    mobile_number: '01043552450',
+  });
 
   const goToMain = () => navigate('/main-hoon');
 
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  const validation = () => {
+    const emailRegExp =
+      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+    const passwordRegExp =
+      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
+
+    return (
+      emailRegExp.test(values.email) && passwordRegExp.test(values.password)
+    );
+  };
+
+  const Login = async e => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://10.58.6.45:8000/user/signin', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: values.email,
+          password: values.password,
+          name: values.name,
+          mobile_number: values.mobile_number,
+        }),
+      });
+      if (response.token) {
+        const result = response.json();
+        localStorage.setItem('access_token', result.token);
+        goToMain();
+      }
+    } catch (err) {
+      alert('ERROR');
+    }
+  };
+
   return (
-    <form className="login__box__form" onSubmit={goToMain}>
+    <form className="login__box__form" onSubmit={Login}>
       <input
-        onChange={idValue}
+        onChange={handleInput}
         type="text"
         className="login__box__form__id"
-        name="id"
+        name="email"
         placeholder="전화번호, 사용자 이름 또는 이메일"
       />
       <input
-        onChange={pwValue}
+        onChange={handleInput}
         type="password"
         className="login__box__form__pw"
         name="password"

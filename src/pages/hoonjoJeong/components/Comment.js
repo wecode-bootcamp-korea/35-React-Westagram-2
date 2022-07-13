@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 const Comment = ({ name }) => {
   const [comment, setComment] = useState([]);
-  const [val, setVal] = useState('');
+  const [values, setValues] = useState('');
 
   const inputValue = e => {
-    setVal(e.target.value);
+    setValues(e.target.value);
   };
 
   const validation = () => {
-    return val.length > 1;
+    return values.length > 1;
   };
 
   const handleAddComment = e => {
@@ -22,7 +22,7 @@ const Comment = ({ name }) => {
     };
 
     setComment([...comment, inputObj]);
-    setVal('');
+    setValues('');
     e.target[0].value = null;
   };
 

@@ -1,6 +1,7 @@
 import { UserStory, UseRecommend } from '../components/Story';
 import Nav from '../components/Nav';
 import Comment from '../components/Comment';
+import Feed from '../components/Feed';
 import './Main.scss';
 
 const Main = () => {
@@ -18,8 +19,9 @@ const Main = () => {
       />
       <Nav />
       <div className="main-container">
-        <main class="container">
+        <main className="container">
           <div className="container">
+            {/* <Feed /> */}
             <div className="left-parents">
               <div className="feed-title">
                 <div className="user">
@@ -47,10 +49,7 @@ const Main = () => {
                     <button className="modal-btn">
                       <span className="material-icons-outlined"> textsms </span>
                     </button>
-                    <span className="material-icons-outlined">
-                      {' '}
-                      file_upload{' '}
-                    </span>
+                    <span className="material-icons-outlined" />
                   </div>
                   <span className="material-icons-outlined bookmark">
                     bookmark_border

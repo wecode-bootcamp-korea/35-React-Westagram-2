@@ -1,4 +1,4 @@
-.loginMaster {
+.login {
   background-color: #fafafa;
   color: #8e8e8e;
   font-family: 'NanumSquare', sans-serif;
@@ -61,8 +61,20 @@
             padding: 9px 8px 7px;
           }
 
-          .loginBtn {
+          .loginBtnOff {
             background-color: #b2dffc;
+            margin: 8px 40px;
+            font-size: 13px;
+            font-weight: bold;
+            height: 30px;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: default;
+          }
+
+          .loginBtnOn {
+            background-color: #0095f6;
             margin: 8px 40px;
             font-size: 13px;
             font-weight: bold;

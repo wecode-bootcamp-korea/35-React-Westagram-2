@@ -1,0 +1,44 @@
+.caroselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 470px;
+  height: 119px;
+  margin: 26px 0 0 0;
+  padding: 16px 0 16px 16px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+
+  .carosel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    .caroselElement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: 84px;
+      margin: 0 15px 0 0;
+      gap: 6px;
+    }
+
+    .caroselImage {
+      background-image: url(../../assets/images/profile/profile_wz.png);
+      background-size: contain;
+      width: 66px;
+      height: 66px;
+      border: 3px solid orange;
+      border-radius: 50%;
+    }
+
+    .caroselName {
+      font-size: 12px;
+    }
+  }
+}

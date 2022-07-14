@@ -1,0 +1,81 @@
+.LContents {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  width: 470px;
+  height: auto;
+  margin: 16px 0;
+
+  .contentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    padding: 11px;
+
+    .Publisher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+
+      .pubImage {
+        background-image: url(../../assets/images/profile/profile.png);
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin: 0 12px 0 0;
+      }
+
+      .pubDetail {
+        .pubId {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .ellipsisIcon {
+      svg {
+        font-size: 20px;
+        margin: 3px;
+      }
+    }
+  }
+
+  .contentsArticle {
+    background-image: url(../../assets/images/yes.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 470px;
+  }
+
+  .contentsInteract {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px 4px;
+    margin: 0 0 5px 0;
+
+    .frontalContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      padding: 8px;
+    }
+  }
+}

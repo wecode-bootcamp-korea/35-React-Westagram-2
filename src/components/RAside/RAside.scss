@@ -1,0 +1,158 @@
+.RAside {
+  position: sticky;
+  top: 76px;
+  display: flex;
+  flex-direction: column;
+  width: 319px;
+  height: fit-content;
+  margin: 16px 0 0 30px;
+  font-size: 12px;
+
+  .profileContainer {
+    color: #8e8e8e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    margin: 16px 0 10px 0;
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      .profileImage {
+        background-image: url(../../assets/images/profile/profile.png);
+        background-size: contain;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        margin: 0 18px 0 0;
+      }
+
+      .profileName {
+        display: flex;
+        flex-direction: column;
+
+        .userId {
+          color: #262626;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 3px 0 4px 0;
+        }
+
+        .userName {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .changeUserBtn {
+      font-size: 12px;
+      color: #0095f6;
+      font-weight: bold;
+    }
+  }
+
+  .friendsSuggestion {
+    .quotation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 19px;
+      margin: 0 0 8px 0;
+      color: #8e8e8e;
+
+      .leftP {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .rightP {
+        color: #262626;
+        font-weight: bold;
+      }
+    }
+
+    .friendsContainer {
+      color: #8e8e8e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 48px;
+
+      .friends {
+        display: flex;
+        align-items: center;
+        padding: 8px 4px;
+
+        .friendsImage {
+          background-image: url(../../assets/images/profile/profile_wz.png);
+          background-size: contain;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin: 0 12px 0 0;
+        }
+
+        .friendsName {
+          display: flex;
+          flex-direction: column;
+
+          .userName {
+            color: #262626;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 3px 0 4px 0;
+          }
+
+          .typeOfSuggestion {
+            font-size: 12px;
+          }
+        }
+      }
+      .followBtn {
+        .follow {
+          margin: 0 18px 0 0;
+          font-size: 12px;
+          color: #0095f6;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.hrefListContainer {
+  width: 100%;
+  margin: 28px 0 0 0;
+
+  .hrefList {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    div {
+      margin: 0 9px 6px 0;
+
+      a {
+        &:link,
+        &:visited,
+        &:hover {
+          font-size: 13px;
+          text-decoration: none;
+          color: #c7c7c7;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin: 19px 0 0 0;
+    p {
+      color: #c7c7c7;
+    }
+  }
+}

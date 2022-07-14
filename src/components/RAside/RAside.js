@@ -24,69 +24,73 @@ function RAside() {
             <p className="rightP">모두 보기</p>
           </div>
         </div>
-        <div class="friendsContainer">
-          <div class="friends">
-            <div class="friendsImage" />
-            <div class="friendsName">
-              <p class="userName">이 원재님</p>
-              <p class="typeOfSuggestion">회원님을 위한 추천</p>
+        <div className="friendsContainer">
+          <div className="friends">
+            <div className="friendsImage" />
+            <div className="friendsName">
+              <p className="userName">이 원재님</p>
+              <p className="typeOfSuggestion">회원님을 위한 추천</p>
             </div>
           </div>
-          <div class="followBtn">
-            <span class="follow">팔로우</span>
+          <div className="followBtn">
+            <span className="follow">팔로우</span>
           </div>
         </div>
-        <div class="friendsContainer">
-          <div class="friends">
-            <div class="friendsImage" />
-            <div class="friendsName">
-              <p class="userName">이 원재님</p>
-              <p class="typeOfSuggestion">회원님을 위한 추천</p>
+
+        <div className="friendsContainer">
+          <div className="friends">
+            <div className="friendsImage" />
+            <div className="friendsName">
+              <p className="userName">이 원재님</p>
+              <p className="typeOfSuggestion">회원님을 위한 추천</p>
             </div>
           </div>
-          <div class="followBtn">
-            <span class="follow">팔로우</span>
+          <div className="followBtn">
+            <span className="follow">팔로우</span>
           </div>
         </div>
-        <div class="friendsContainer">
-          <div class="friends">
-            <div class="friendsImage" />
-            <div class="friendsName">
-              <p class="userName">이 원재님</p>
-              <p class="typeOfSuggestion">회원님을 위한 추천</p>
+
+        <div className="friendsContainer">
+          <div className="friends">
+            <div className="friendsImage" />
+            <div className="friendsName">
+              <p className="userName">이 원재님</p>
+              <p className="typeOfSuggestion">회원님을 위한 추천</p>
             </div>
           </div>
-          <div class="followBtn">
-            <span class="follow">팔로우</span>
+          <div className="followBtn">
+            <span className="follow">팔로우</span>
           </div>
         </div>
-        <div class="friendsContainer">
-          <div class="friends">
-            <div class="friendsImage" />
-            <div class="friendsName">
-              <p class="userName">이 원재님</p>
-              <p class="typeOfSuggestion">회원님을 위한 추천</p>
+
+        <div className="friendsContainer">
+          <div className="friends">
+            <div className="friendsImage" />
+            <div className="friendsName">
+              <p className="userName">이 원재님</p>
+              <p className="typeOfSuggestion">회원님을 위한 추천</p>
             </div>
           </div>
-          <div class="followBtn">
-            <span class="follow">팔로우</span>
+          <div className="followBtn">
+            <span className="follow">팔로우</span>
           </div>
         </div>
-        <div class="friendsContainer">
-          <div class="friends">
-            <div class="friendsImage" />
-            <div class="friendsName">
-              <p class="userName">이 원재님</p>
-              <p class="typeOfSuggestion">회원님을 위한 추천</p>
+
+        <div className="friendsContainer">
+          <div className="friends">
+            <div className="friendsImage" />
+            <div className="friendsName">
+              <p className="userName">이 원재님</p>
+              <p className="typeOfSuggestion">회원님을 위한 추천</p>
             </div>
           </div>
-          <div class="followBtn">
-            <span class="follow">팔로우</span>
+          <div className="followBtn">
+            <span className="follow">팔로우</span>
           </div>
         </div>
       </div>
 
-      <div class="hrefListContainer">
+      <div className="hrefListContainer">
         <div className="hrefList">
           {HREF_DATA1.map((hrefData, index) => {
             return (

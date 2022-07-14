@@ -2,35 +2,35 @@ import './LCarosel.scss';
 
 function LCarosel() {
   return (
-    <div class="caroselContainer">
-      <div class="carosel">
-        <div class="caroselElement">
-          <div class="caroselImage" />
-          <div class="caroselName">
+    <div className="caroselContainer">
+      <div className="carosel">
+        <div className="caroselElement">
+          <div className="caroselImage" />
+          <div className="caroselName">
             <p>이원재</p>
           </div>
         </div>
-        <div class="caroselElement">
-          <div class="caroselImage" />
-          <div class="caroselName">
+        <div className="caroselElement">
+          <div className="caroselImage" />
+          <div className="caroselName">
             <p>이원재</p>
           </div>
         </div>
-        <div class="caroselElement">
-          <div class="caroselImage" />
-          <div class="caroselName">
+        <div className="caroselElement">
+          <div className="caroselImage" />
+          <div className="caroselName">
             <p>이원재</p>
           </div>
         </div>
-        <div class="caroselElement">
-          <div class="caroselImage" />
-          <div class="caroselName">
+        <div className="caroselElement">
+          <div className="caroselImage" />
+          <div className="caroselName">
             <p>이원재</p>
           </div>
         </div>
-        <div class="caroselElement">
-          <div class="caroselImage" />
-          <div class="caroselName">
+        <div className="caroselElement">
+          <div className="caroselImage" />
+          <div className="caroselName">
             <p>이원재</p>
           </div>
         </div>

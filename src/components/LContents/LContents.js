@@ -14,7 +14,6 @@ function LContents() {
           <div className="pubImage" />
           <div className="pubDetail">
             <div className="pubId">오인유</div>
-            <div className="pubTitle">commacial</div>
           </div>
         </div>
         <div className="ellipsisIcon">
@@ -43,31 +42,24 @@ function LContents() {
         </div>
       </div>
 
-      <div className="contentsLike">
-        <div className="likeSpan">
-          좋아요 <span>1,243</span>개
-        </div>
-      </div>
-
       <div className="contentsDiscription">
         <div className="descriptionContainer">
-          <span>
-            <span className="userId">오인유 </span>응애 사람 살려
-          </span>
-        </div>
-        <div className="descriptionComment">
-          <div className="commentLeft">
+          <div className="like">
+            <p>
+              udtbro님 <span>여러 명</span>이 좋아합니다
+            </p>
+          </div>
+          <div className="description">
+            <span className="userId">오인유</span>응애 사람 살려
+          </div>
+          <div className="comment">
             <div className="userName">김첨지</div>
-            <span className="userComment">asdf</span>
+            <p className="userComment">asdf</p>
           </div>
-          <div className="commentRight">
-            <i className="bx bx-heart" id="exemple" onclick="like()" />
+          <div className="timeline">
+            <p>1일 전</p>
           </div>
         </div>
-      </div>
-
-      <div className="contentsTimeline">
-        <p>1일 전</p>
       </div>
 
       <form className="contentsComment">

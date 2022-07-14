@@ -5,35 +5,31 @@ import '../../../styles/reset.scss';
 import './Login.scss';
 
 function Login() {
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
-  const [canIPass, canYouPass] = useState(true);
+  // const [id, setId] = useState('');
+  // const [pw, setPw] = useState('');
 
-  const handleIdInput = event => {
-    setId(event.target.value);
-  };
-  const handlePwInput = event => {
-    setPw(event.target.value);
-  };
-
-  // const [values, setValues] = useState({
-  //   userId: '',
-  //   userPw: '',
-  //   canIpass: true,
-  // });
-
-  // const handleInput = e => {
-  //   const { name, value } = e.target;
-  //   setValues(prevValues => ({
-  //     ...prevValues,
-  //     [name]: value,
-  //   }));
+  // const handleIdInput = event => {
+  //   setId(event.target.value);
+  // };
+  // const handlePwInput = event => {
+  //   setPw(event.target.value);
   // };
 
+  const [values, setValues] = useState({
+    userId: '',
+    userPw: '',
+  });
+
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setValues(prevValues => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
+
   const validation = () => {
-    return id.includes('@') && pw.length >= 5
-      ? canYouPass(false)
-      : canYouPass(true);
+    return values.userId.includes('@') && values.userPw.length >= 5;
   };
 
   const navigate = useNavigate();
@@ -50,26 +46,27 @@ function Login() {
         <div className="rightPanel">
           <div className="rightTop">
             <h1 className="logo">Instagram</h1>
-            <form className="signIn" onKeyUp={validation} onSubmit={goToMain}>
+            <form className="signIn" onSubmit={goToMain}>
               <input
                 className="id"
                 name="userId"
-                onChange={handleIdInput}
-                onkeyup={validation}
+                onChange={handleInput}
+                onKeyUp={validation}
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
               />
               <input
                 className="pw"
                 name="userPw"
-                onChange={handlePwInput}
+                onChange={handleInput}
+                onKeyUp={validation}
                 type="password"
                 placeholder="비밀번호"
               />
               <button
-                className={'loginBtn' + (canIPass ? 'Off' : 'On')}
+                className={'loginBtn' + (!validation() ? 'Off' : 'On')}
                 type="submit"
-                disabled={canIPass}
+                disabled={!validation()}
               >
                 로그인
               </button>

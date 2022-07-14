@@ -29,7 +29,7 @@ function ContentsComments() {
     <div className="ContentsComments">
       <CommentsDiscription value={feedComments} />
 
-      <form className="contentsComment" onKeyUp={validation} onSubmit={post}>
+      <form className="commentForm" onKeyUp={validation} onSubmit={post}>
         <div className="smileWrapper">
           <TbMoodSmile />
         </div>

@@ -5,7 +5,7 @@ import './Main.scss';
 
 function MainChang() {
   return (
-    <main className="mainMaster">
+    <main className="main">
       <Nav />
       <section className="sectionContainer">
         <LContainer />

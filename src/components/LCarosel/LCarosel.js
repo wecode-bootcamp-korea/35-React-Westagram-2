@@ -2,7 +2,7 @@ import './LCarosel.scss';
 
 function LCarosel() {
   return (
-    <div className="caroselContainer">
+    <div className="LCarosel">
       <div className="carosel">
         <div className="caroselElement">
           <div className="caroselImage" />

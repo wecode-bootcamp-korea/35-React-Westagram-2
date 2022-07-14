@@ -3,7 +3,7 @@ import LContents from '../LContents/LContents';
 
 function LContainer() {
   return (
-    <div className="LeftPanel">
+    <div className="LContainer">
       <LCarosel />
       <LContents />
       <LContents />

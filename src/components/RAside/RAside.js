@@ -2,7 +2,7 @@ import './RAside.scss';
 
 function RAside() {
   return (
-    <aside className="asideContainer">
+    <aside className="RAside">
       <div className="profileContainer">
         <div className="profile">
           <div className="profileImage" />

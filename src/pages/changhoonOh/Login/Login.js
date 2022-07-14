@@ -40,7 +40,7 @@ function Login() {
 
   const goToMain = e => {
     e.preventDefault();
-    navigate('../Main/Main');
+    return navigate('../Main/Main');
   };
 
   return (

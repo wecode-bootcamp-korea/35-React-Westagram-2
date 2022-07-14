@@ -13,7 +13,7 @@ function Footer() {
   // }, []);
 
   return (
-    <footer>
+    <footer className="Footer">
       <nav className="footerNav">
         <div className="hrefList">
           {HREF_DATA1.map((hrefData, index) => {
